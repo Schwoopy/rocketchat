@@ -1,0 +1,12 @@
+---
+- name: "Create a Rocketchatt env"
+  hosts: "localhost"
+  become: false
+  gather_facts: true
+  vars:
+    remove_container: "false"
+    read_only: "true"
+  tasks:
+    - name: "Install, configure and deploy a Rocketchat container with pods"
+      import_role:
+        name: "role-container-rocketchat"
