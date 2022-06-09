@@ -83,7 +83,7 @@
     volume:
       - "{{ ansible_env.HOME }}/containers/rocketchat/data:/data/db"
     read_only: "{{ rocketchat_container_read_only }}"
-    rm: "{{ rocketchat_conatiner_remove_container }}"
+    rm: "{{ rocketchat_container_remove_container }}"
     state: started
   register: mongodb_create
 
@@ -110,7 +110,7 @@
       - "{{ ansible_env.HOME }}/containers/rocketchat/uploads:/app/uploads"
     requires: "rocketchat-db"
     read_only: "{{ rocketchat_container_read_only }}"
-    rm: "{{ rocketchat_conatiner_remove_container }}"
+    rm: "{{ rocketchat_container_remove_container }}"
     state: started
 
 - name: "Run Rocketchat Proxy container"
