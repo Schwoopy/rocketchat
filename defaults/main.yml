@@ -1,0 +1,8 @@
+---
+# defaults file for role-container-test
+rocketchat_http_port: "8080"
+rocketchat_https_port: "8443"
+rocketchat_cert_cn: "YourServername.local"
+rocketchat_cert_ou: "Your Org"
+rocketchat_container_read_only: false
+rocketchat_container_remove_container: true
